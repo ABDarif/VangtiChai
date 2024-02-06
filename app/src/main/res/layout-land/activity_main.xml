@@ -10,6 +10,8 @@
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:text="2"
         app:layout_constraintBottom_toTopOf="@+id/btn5"
         app:layout_constraintEnd_toStartOf="@+id/btn3"
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="6"
+        app:layout_constraintBottom_toBottomOf="@+id/btn5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn5" />
 
@@ -31,17 +34,19 @@
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="125dp"
+        android:layout_marginStart="388dp"
         android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn2" />
+        app:layout_constraintTop_toTopOf="@+id/btn2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnClear"
         android:layout_width="180dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="24dp"
         android:text="CLEAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -51,6 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4"
+        app:layout_constraintBottom_toBottomOf="@+id/btn5"
         app:layout_constraintStart_toStartOf="@+id/btn1"
         app:layout_constraintTop_toTopOf="@+id/btn5" />
 
@@ -58,6 +64,8 @@
         android:id="@+id/btn8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="12dp"
         android:text="8"
         app:layout_constraintBottom_toTopOf="@+id/btnClear"
@@ -71,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="9"
+        app:layout_constraintBottom_toBottomOf="@+id/btn8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn8" />
 
@@ -78,10 +87,11 @@
         android:id="@+id/btn0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="5dp"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="@+id/btnClear"
         app:layout_constraintEnd_toStartOf="@+id/btnClear"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn7"
         app:layout_constraintTop_toTopOf="@+id/btnClear" />
 
@@ -90,6 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="7"
+        app:layout_constraintBottom_toBottomOf="@+id/btn8"
         app:layout_constraintStart_toStartOf="@+id/btn4"
         app:layout_constraintTop_toTopOf="@+id/btn8" />
 
@@ -99,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn2" />
 
@@ -106,6 +118,8 @@
         android:id="@+id/btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="12dp"
         android:text="5"
         app:layout_constraintBottom_toTopOf="@+id/btn8"
@@ -144,26 +158,25 @@
         android:id="@+id/tv10notes"
         android:layout_width="50dp"
         android:layout_height="48dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="0"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/tv10"
-        app:layout_constraintTop_toBottomOf="@+id/tv20notes" />
+        app:layout_constraintTop_toTopOf="@+id/tv10" />
 
     <EditText
         android:id="@+id/tv10"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="112dp"
         android:ems="10"
         android:inputType="text"
         android:text="10: "
         android:textAlignment="textEnd"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv20" />
+        app:layout_constraintStart_toEndOf="@+id/tv500notes"
+        app:layout_constraintTop_toTopOf="@+id/tv500" />
 
     <EditText
         android:id="@+id/tv2"
@@ -175,7 +188,7 @@
         android:text="2: "
         android:textAlignment="textEnd"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv5"
         app:layout_constraintTop_toBottomOf="@+id/tv5" />
 
     <TextView
@@ -187,7 +200,7 @@
         android:text="0"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tv2"
+        app:layout_constraintStart_toEndOf="@+id/tv5"
         app:layout_constraintTop_toBottomOf="@+id/tv5notes" />
 
     <EditText
@@ -224,14 +237,14 @@
         android:text="0"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tv5"
+        app:layout_constraintStart_toStartOf="@+id/tv10notes"
         app:layout_constraintTop_toBottomOf="@+id/tv10notes" />
 
     <EditText
         android:id="@+id/tv500"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="148dp"
         android:ems="10"
         android:inputType="text"
         android:text="500: "
@@ -250,7 +263,7 @@
         android:text="5: "
         android:textAlignment="textEnd"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv10"
         app:layout_constraintTop_toBottomOf="@+id/tv10" />
 
     <EditText
@@ -263,7 +276,7 @@
         android:text="1: "
         android:textAlignment="textEnd"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv2"
         app:layout_constraintTop_toBottomOf="@+id/tv2" />
 
     <TextView
@@ -307,12 +320,11 @@
         android:id="@+id/tv1notes"
         android:layout_width="50dp"
         android:layout_height="48dp"
-        android:layout_marginStart="1dp"
         android:layout_marginTop="8dp"
         android:text="0"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tv1"
+        app:layout_constraintStart_toStartOf="@+id/tv2notes"
         app:layout_constraintTop_toBottomOf="@+id/tv2notes" />
 
     <EditText
