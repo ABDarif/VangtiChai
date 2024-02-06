@@ -61,6 +61,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun clearTextView() {
         tvTotal.text = ""
+        updateTextView("tv500notes", 0)
+        updateTextView("tv100notes", 0)
+        updateTextView("tv50notes", 0)
+        updateTextView("tv20notes", 0)
+        updateTextView("tv10notes", 0)
+        updateTextView("tv5notes", 0)
+        updateTextView("tv2notes", 0)
+        updateTextView("tv1notes", 0)
     }
 
     private fun setNumberButtonClickListener(button: Button, number: String) {
