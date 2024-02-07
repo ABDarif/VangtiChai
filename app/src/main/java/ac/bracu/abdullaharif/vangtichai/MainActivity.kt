@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnClear: Button
 
     private lateinit var tvTotal: TextView
+
+    // Key constants for savedInstanceState
+    private val KEY_TOTAL_AMOUNT = "totalAmount"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -57,6 +60,20 @@ class MainActivity : AppCompatActivity() {
         btnClear.setOnClickListener {
             clearTextView()
         }
+
+        // Restore the saved state
+        savedInstanceState?.let {
+            val totalAmount = it.getInt(KEY_TOTAL_AMOUNT)
+            tvTotal.text = totalAmount.toString()
+            calculateNotes()
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        // Save the current total amount when the activity is about to be destroyed
+        outState.putInt(KEY_TOTAL_AMOUNT, tvTotal.text.toString().toInt())
+        super.onSaveInstanceState(outState)
+
     }
 
     private fun clearTextView() {
