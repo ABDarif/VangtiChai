@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var tvTotal: TextView
 
-    // Key constants for savedInstanceState
-    private val KEY_TOTAL_AMOUNT = "totalAmount"
+    // restoring key-value pair declaration
+    private var KEY_TOTAL_AMOUNT = "totalAmount"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -61,16 +61,18 @@ class MainActivity : AppCompatActivity() {
             clearTextView()
         }
 
-        // Restore the saved state
+        // restore the saved state ***NEED TO BE SOLVED***
         savedInstanceState?.let {
             val totalAmount = it.getInt(KEY_TOTAL_AMOUNT)
             tvTotal.text = totalAmount.toString()
             calculateNotes()
         }
+
     }
 
+
     override fun onSaveInstanceState(outState: Bundle) {
-        // Save the current total amount when the activity is about to be destroyed
+        // Save the current total amount when the activity is about to be destroyed ***NEED TO BE SOLVED***
         outState.putInt(KEY_TOTAL_AMOUNT, tvTotal.text.toString().toInt())
         super.onSaveInstanceState(outState)
 
