@@ -24,7 +24,7 @@ The following **FEATURES** are **ALREADY** implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://im2.ezgif.com/tmp/ezgif-2-48fc05427c.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://s6.ezgif.com/tmp/ezgif-6-9da0df2ae0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ezgif](https://ezgif.com/maker).
 
