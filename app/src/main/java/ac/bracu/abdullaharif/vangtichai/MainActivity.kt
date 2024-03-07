@@ -61,18 +61,26 @@ class MainActivity : AppCompatActivity() {
             clearTextView()
         }
 
-        // restore the saved state ***NEED TO BE SOLVED***
+//         restore the saved state ***NEED TO BE SOLVED***
         savedInstanceState?.let {
             val totalAmount = it.getInt(KEY_TOTAL_AMOUNT)
+            if (totalAmount == 0) {
+                clearTextView()
+            }
             tvTotal.text = totalAmount.toString()
             calculateNotes()
         }
+
 
     }
 
 
     override fun onSaveInstanceState(outState: Bundle) {
         // Save the current total amount when the activity is about to be destroyed ***NEED TO BE SOLVED***
+        if (tvTotal.text == "") {
+            outState.putInt(KEY_TOTAL_AMOUNT, 0)
+            super.onSaveInstanceState(outState)
+        }
         outState.putInt(KEY_TOTAL_AMOUNT, tvTotal.text.toString().toInt())
         super.onSaveInstanceState(outState)
 
