@@ -14,15 +14,9 @@ The following **required** functionality is completed:
 * [x] Real-time calculation of the number of notes.
 * [x] Works in both portrait & landscape orientation with no data being lost.
 
-The following **FEATURES** are **ALREADY** implemented:
-
-* [ ] Keypad for taking input values
-* [ ] Real-time calculation of the number of notes required to meet that input value.
-* [ ] Works for both portrait & landscape orientations without any data loss
-
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented features:
 
 <img src='https://s6.ezgif.com/tmp/ezgif-6-9da0df2ae0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
