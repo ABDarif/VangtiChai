@@ -2,7 +2,7 @@
 
 ## *Abdullah Arif*
 
-**VangtiChai** An app that takes an amount of money as input & shows how many notes are needed to meet that specified amount.
+**VangtiChai** is an app that takes an amount of money as input & shows how many notes are needed to meet that specified amount.
 
 Time spent: **10** hours
 
@@ -31,8 +31,7 @@ GIF created with [ezgif](https://ezgif.com/maker).
 ## Notes
 
 * [x] One of the most crucial challenges were to save all the data before screen rotation so that it keeps intact even after the rotation, Here came to play the "savedInstanceState" for retrieving all the data & "onSaveInstanceState" to restore all the data. One thing to note here, every time the screen gets rotated, "onCreate" method gets called from the very beginning each time
-* [x] Some relevant links: 
-* [x] https://developer.android.com/guide/fragments/saving-state
+* [x] savedInstanceState & onSaveInstanceState: https://developer.android.com/guide/fragments/saving-state
 
 ## License
 
